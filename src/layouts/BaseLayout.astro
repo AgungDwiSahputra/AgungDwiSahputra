@@ -1,0 +1,232 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import JsonLd from '../components/JsonLd.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  /** Tambah JSON-LD schema tambahan per halaman (misalnya CreativeWork di project detail) */
+  extraSchema?: Record<string, unknown> | null;
+  /** Jika true, tampilkan Person + WebSite schema di <head> */
+  isHomepage?: boolean;
+}
+
+const {
+  title,
+  description = "Full-Stack Web Developer dengan keahlian Laravel, TailwindCSS, dan GIS — Agung Dwi Sahputra",
+  ogImage = "/images/og-default.jpg",
+  canonicalUrl,
+  extraSchema = null,
+  isHomepage = false,
+} = Astro.props;
+
+const SITE_URL = "https://agungdwisahputra.github.io/AgungDwiSahputra";
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const canonical = canonicalUrl ?? Astro.url.href;
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Agung Dwi Sahputra",
+  "url": SITE_URL,
+  "image": `${SITE_URL}/images/profile.jpg`,
+  "jobTitle": "Full-Stack Web Developer",
+  "description": "Experienced Web Developer with 3+ years of expertise in Laravel, TailwindCSS, and GIS systems.",
+  "email": "agungdwisahputra@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jakarta",
+    "addressCountry": "ID"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/agung-ds20",
+    "https://github.com/AgungDwiSahputra"
+  ],
+  "knowsAbout": [
+    "Laravel", "PHP", "TailwindCSS", "JavaScript", "TypeScript",
+    "ASP.NET", "C#", "SQL Server", "MySQL", "GIS", "Leaflet.js",
+    "Web Development", "UI/UX Design"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universitas Esa Unggul"
+  }
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Agung Dwi Sahputra — Portfolio",
+  "url": SITE_URL,
+  "description": description,
+  "author": { "@type": "Person", "name": "Agung Dwi Sahputra" }
+};
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0f1e" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary meta -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Agung Dwi Sahputra" />
+    <meta name="keywords" content="web developer, laravel, tailwindcss, php, gis, jakarta, indonesia, full-stack, portfolio" />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Hreflang (bilingual site) -->
+    <link rel="alternate" hreflang="id" href={canonical} />
+    <link rel="alternate" hreflang="en" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Agung Dwi Sahputra" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${SITE_URL}${ogImage}`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${title} — Agung Dwi Sahputra`} />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${SITE_URL}${ogImage}`} />
+    <meta name="twitter:image:alt" content={`${title} — Agung Dwi Sahputra`} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+    <link rel="icon" type="image/x-icon" href={`${base}/favicon.ico`} />
+
+    <!-- Preload critical asset (LCP) -->
+    <link rel="preload" as="image" href={`${base}/images/profile.jpg`} fetchpriority="high" />
+
+    <!-- JSON-LD Structured Data -->
+    {isHomepage && <JsonLd schema={personSchema} />}
+    {isHomepage && <JsonLd schema={websiteSchema} />}
+    {extraSchema && <JsonLd schema={extraSchema} />}
+  </head>
+
+  <body class="gradient-hero min-h-screen">
+    <!-- Skip to content (a11y) -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[300] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-blue-500 focus:text-white focus:text-sm focus:font-medium focus:shadow-lg"
+    >
+      Langsung ke konten utama
+    </a>
+
+    <Navbar />
+
+    <main id="main-content" data-pagefind-body>
+      <slot />
+    </main>
+
+    <Footer />
+
+    <!-- ── Animate on scroll ─────────────────────── -->
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in-view');
+            e.target.querySelectorAll?.('.skill-bar-fill').forEach((bar: Element) => {
+              bar.classList.add('animated');
+            });
+            observer.unobserve(e.target);
+          }
+        }),
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+      document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    </script>
+
+    <!-- ── i18n — Language Toggle ────────────────── -->
+    <script>
+      const TRANSLATIONS: Record<string, Record<string, string>> = {
+        'nav.about':           { id: 'Tentang',    en: 'About'      },
+        'nav.skills':          { id: 'Keahlian',   en: 'Skills'     },
+        'nav.projects':        { id: 'Proyek',     en: 'Projects'   },
+        'nav.contact':         { id: 'Kontak',     en: 'Contact'    },
+        'nav.downloadcv':      { id: 'Unduh CV',   en: 'Download CV'},
+        'nav.search':          { id: 'Cari',       en: 'Search'     },
+        'hero.greeting':       { id: 'Hai, saya',  en: "Hi, I'm"   },
+        'hero.role':           { id: 'Full-Stack Web Developer', en: 'Full-Stack Web Developer' },
+        'hero.bio':            {
+          id: '3+ tahun membangun aplikasi web yang responsif, scalable, dan SEO-friendly. Spesialis Laravel, TailwindCSS, dan sistem GIS berbasis peta.',
+          en: '3+ years building responsive, scalable, and SEO-friendly web applications. Specialist in Laravel, TailwindCSS, and GIS map-based systems.',
+        },
+        'hero.cta_projects':   { id: 'Lihat Proyek',  en: 'View Projects' },
+        'hero.cta_cv':         { id: 'Unduh CV',      en: 'Download CV'   },
+        'hero.available':      { id: 'Terbuka untuk peluang karir', en: 'Open to opportunities' },
+        'hero.years_label':    { id: 'Tahun Exp.',  en: 'Years Exp.'  },
+        'hero.sat_label':      { id: 'Client Puas', en: 'Clients Sat.'},
+        'hero.time_label':     { id: 'Tepat Waktu', en: 'On-time'     },
+        'about.label':         { id: 'Tentang Saya',            en: 'About Me'             },
+        'about.title':         { id: 'Perjalanan & Pengalaman', en: 'Journey & Experience' },
+        'about.subtitle':      { id: 'Dari desainer grafis hingga full-stack developer — evolusi karir yang terus berkembang.', en: 'From graphic designer to full-stack developer — a career that keeps evolving.' },
+        'about.cert':          { id: 'Sertifikasi & Penghargaan', en: 'Certifications & Awards' },
+        'about.edu':           { id: 'Pendidikan',               en: 'Education'               },
+        'about.work':          { id: 'Pengalaman Kerja',         en: 'Work Experience'         },
+        'about.current':       { id: 'Saat ini',                 en: 'Current'                 },
+        'skills.label':        { id: 'Kompetensi',      en: 'Competencies'  },
+        'skills.title':        { id: 'Keahlian Teknis', en: 'Technical Skills' },
+        'skills.subtitle':     { id: 'Stack teknologi yang saya gunakan sehari-hari dalam membangun produk digital.', en: 'Technology stack I use daily to build digital products.' },
+        'projects.label':      { id: 'Portfolio',       en: 'Portfolio'      },
+        'projects.title':      { id: 'Proyek Unggulan', en: 'Featured Projects' },
+        'projects.subtitle':   { id: 'Beberapa proyek terpilih yang menunjukkan keahlian teknis saya.', en: 'A selection of projects showcasing my technical expertise.' },
+        'projects.viewall':    { id: 'Lihat semua proyek', en: 'View all projects' },
+        'projects.viewall_btn':{ id: 'Lihat Semua Proyek', en: 'View All Projects' },
+        'contact.label':       { id: 'Kontak',             en: 'Contact'           },
+        'contact.title':       { id: 'Mari Berkolaborasi', en: "Let's Collaborate"  },
+        'contact.subtitle':    { id: 'Punya proyek menarik atau tawaran kerja? Saya siap mendengar dari Anda.', en: 'Have an exciting project or job offer? I\'d love to hear from you.' },
+        'contact.name':        { id: 'Nama Lengkap',       en: 'Full Name'         },
+        'contact.email':       { id: 'Email',              en: 'Email'             },
+        'contact.message':     { id: 'Pesan',              en: 'Message'           },
+        'contact.send':        { id: 'Kirim Pesan',        en: 'Send Message'      },
+        'contact.success':     { id: 'Pesan terkirim! Saya akan membalas dalam 1–2 hari kerja.', en: 'Message sent! I\'ll reply within 1–2 business days.' },
+        'contact.error':       { id: 'Gagal mengirim. Coba lagi atau hubungi via email langsung.', en: 'Failed to send. Please try again or contact me directly via email.' },
+      };
+
+      type Lang = 'id' | 'en';
+      let currentLang: Lang = (localStorage.getItem('portfolio-lang') as Lang) ?? 'id';
+
+      function applyLang(lang: Lang) {
+        document.querySelectorAll<HTMLElement>('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n') ?? '';
+          if (TRANSLATIONS[key]) el.textContent = TRANSLATIONS[key][lang];
+        });
+        document.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('[data-ph-id]').forEach(el => {
+          const ph = el.getAttribute(`data-ph-${lang}`);
+          if (ph) el.placeholder = ph;
+        });
+        document.documentElement.lang = lang;
+        const btn = document.getElementById('lang-toggle');
+        if (btn) btn.textContent = lang === 'id' ? 'EN' : 'ID';
+        // Sync all mobile toggle buttons
+        document.querySelectorAll<HTMLButtonElement>('[data-lang-toggle]').forEach(b => {
+          b.textContent = lang === 'id' ? 'EN' : 'ID';
+        });
+        currentLang = lang;
+        localStorage.setItem('portfolio-lang', lang);
+      }
+
+      applyLang(currentLang);
+      (window as any).toggleLang = () => applyLang(currentLang === 'id' ? 'en' : 'id');
+    </script>
+  </body>
+</html>

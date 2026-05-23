@@ -1,0 +1,145 @@
+---
+import experienceData from '../../content/experience.json';
+import profileData from '../../content/profile.json';
+
+const { work, education, certifications } = experienceData;
+const currentJobs = work.filter(j => j.current);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<section id="about" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Section header -->
+    <div class="text-center mb-14" data-animate>
+      <p class="section-label" data-i18n="about.label">Tentang Saya</p>
+      <h2 class="text-3xl lg:text-4xl font-bold text-white" data-i18n="about.title">Perjalanan & Pengalaman</h2>
+      <p class="text-white/45 mt-3 max-w-xl mx-auto text-sm leading-relaxed" data-i18n="about.subtitle">
+        Dari desainer grafis hingga full-stack developer — evolusi karir yang terus berkembang.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+
+      <!-- ─── Left: Bio card ───────── (2 kolom) -->
+      <div class="lg:col-span-2 space-y-5">
+
+        <!-- Bio -->
+        <div class="glass glass-hover rounded-2xl p-6" data-animate>
+          <div class="flex items-center gap-4 mb-5">
+            <img
+              src={`${base}/images/profile.jpg`}
+              alt="Agung Dwi Sahputra"
+              width="64"
+              height="64"
+              class="w-16 h-16 rounded-full object-cover object-top border-2"
+              style="border-color: rgba(59,130,246,0.4)"
+            />
+            <div>
+              <h3 class="text-white font-semibold text-base">{profileData.name}</h3>
+              <p class="text-blue-400 text-xs">{profileData.headline}</p>
+              <p class="text-white/40 text-xs">{profileData.location}</p>
+            </div>
+          </div>
+          <p class="text-white/55 text-sm leading-relaxed">
+            {profileData.bio}
+          </p>
+        </div>
+
+        <!-- Certifications -->
+        <div class="glass glass-hover rounded-2xl p-6" data-animate data-delay="100">
+          <h3 class="text-white font-semibold text-sm mb-4 flex items-center gap-2">
+            <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+            </svg>
+            Sertifikasi & Penghargaan
+          </h3>
+          <ul class="space-y-2" role="list">
+            {certifications.map(cert => (
+              <li class="flex items-start gap-2 text-xs text-white/55">
+                <span class="mt-1 w-1.5 h-1.5 rounded-full bg-blue-400/60 shrink-0"></span>
+                {cert}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Education -->
+        <div class="glass glass-hover rounded-2xl p-6" data-animate data-delay="200">
+          <h3 class="text-white font-semibold text-sm mb-4 flex items-center gap-2">
+            <svg class="w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </svg>
+            Pendidikan
+          </h3>
+          <div class="space-y-4">
+            {education.map(edu => (
+              <div>
+                <p class="text-white/80 text-sm font-medium">{edu.institution}</p>
+                <p class="text-white/50 text-xs">{edu.degree} — {edu.field}</p>
+                <p class="text-blue-400/70 text-xs mt-0.5">{edu.period}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ─── Right: Timeline ────────── (3 kolom) -->
+      <div class="lg:col-span-3" data-animate data-delay="100">
+        <h3 class="text-white font-semibold text-sm mb-6 flex items-center gap-2">
+          <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Pengalaman Kerja
+        </h3>
+
+        <div class="relative">
+          <!-- Vertical line -->
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-white/10" aria-hidden="true"></div>
+
+          <div class="space-y-5">
+            {work.map((job, i) => (
+              <div class="relative flex gap-5" data-animate data-delay={String(i * 100)}>
+                <!-- Dot -->
+                <div class={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1 z-10 ${job.current ? 'bg-blue-500/30 border border-blue-400/50' : 'glass border-white/10 border'}`} aria-hidden="true">
+                  <div class={`w-2 h-2 rounded-full ${job.current ? 'bg-blue-400' : 'bg-white/30'}`}></div>
+                </div>
+
+                <!-- Card -->
+                <div class="glass glass-hover rounded-xl p-4 flex-1">
+                  <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                    <div>
+                      <h4 class="text-white font-semibold text-sm">{job.role}</h4>
+                      <p class="text-blue-400 text-xs">{job.company}</p>
+                    </div>
+                    <div class="text-right shrink-0">
+                      <span class={`text-xs px-2 py-0.5 rounded-full ${job.current ? 'bg-green-500/15 text-green-400 border border-green-500/25' : 'bg-white/5 text-white/40 border border-white/10'}`}>
+                        {job.current ? 'Saat ini' : job.period.split('–')[1]?.trim() ?? ''}
+                      </span>
+                      <p class="text-white/30 text-xs mt-1">{job.period}</p>
+                    </div>
+                  </div>
+                  <ul class="space-y-1 mb-3">
+                    {job.highlights.slice(0, 3).map(h => (
+                      <li class="text-white/50 text-xs leading-relaxed flex items-start gap-1.5">
+                        <span class="text-blue-400/60 mt-0.5 shrink-0">▸</span>
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+                  <div class="flex flex-wrap gap-1.5">
+                    {job.tags.map(tag => (
+                      <span class="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

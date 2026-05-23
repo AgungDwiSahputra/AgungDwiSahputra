@@ -1,0 +1,297 @@
+---
+// Ganti YOUR_FORM_ID dengan Form ID dari akun Formspree Anda (formspree.io)
+// Langkah: 1) Daftar di formspree.io  2) Buat form baru  3) Copy form ID (8 karakter)
+const FORMSPREE_ID = 'xdajzqpd';
+const FORMSPREE_URL = `https://formspree.io/f/${FORMSPREE_ID}`;
+---
+
+<section id="contact" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-24" aria-hidden="true"></div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+
+      <!-- ─── Left: Info ─────────── (2 kolom) -->
+      <div class="lg:col-span-2" data-animate>
+        <p class="section-label" data-i18n="contact.label">Kontak</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4" data-i18n="contact.title">Mari Berkolaborasi</h2>
+        <p class="text-white/45 text-sm leading-relaxed mb-8" data-i18n="contact.subtitle">
+          Punya proyek menarik atau tawaran kerja? Saya siap mendengar dari Anda.
+        </p>
+
+        <!-- Contact links -->
+        <div class="space-y-4">
+          <a
+            href="mailto:agungdwisahputra@gmail.com"
+            class="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors group"
+          >
+            <div class="w-9 h-9 rounded-xl glass flex items-center justify-center group-hover:border-blue-500/30 transition-colors border border-white/10">
+              <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <span>agungdwisahputra@gmail.com</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/agung-ds20"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors group"
+          >
+            <div class="w-9 h-9 rounded-xl glass flex items-center justify-center group-hover:border-blue-500/30 transition-colors border border-white/10">
+              <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </div>
+            <span>linkedin.com/in/agung-ds20</span>
+          </a>
+          <div class="flex items-center gap-3 text-sm text-white/60">
+            <div class="w-9 h-9 rounded-xl glass flex items-center justify-center border border-white/10">
+              <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <span>Jakarta, Indonesia</span>
+          </div>
+        </div>
+
+        <!-- Response time -->
+        <div class="mt-8 glass rounded-xl p-4 border-green-500/15 border">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            <span class="text-green-400 text-xs font-medium">Biasanya membalas dalam 24 jam</span>
+          </div>
+          <p class="text-white/35 text-xs">Senin–Jumat, 09.00–18.00 WIB</p>
+        </div>
+      </div>
+
+      <!-- ─── Right: Form ─────────── (3 kolom) -->
+      <div class="lg:col-span-3" data-animate data-delay="100">
+        <div class="glass rounded-2xl p-6 lg:p-8">
+
+          <!-- Success state -->
+          <div id="form-success" class="hidden text-center py-10">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3)">
+              <svg class="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <p class="text-white font-semibold mb-2">Pesan Terkirim! 🎉</p>
+            <p class="text-white/50 text-sm" data-i18n="contact.success">
+              Pesan terkirim! Saya akan membalas dalam 1–2 hari kerja.
+            </p>
+            <button id="form-reset" class="mt-6 text-sm text-blue-400 hover:text-blue-300 transition-colors">
+              Kirim pesan lain
+            </button>
+          </div>
+
+          <!-- Form -->
+          <form id="contact-form" novalidate aria-label="Form kontak">
+            <!-- Honeypot (anti-spam, hidden from users) -->
+            <div class="absolute left-[-9999px]" aria-hidden="true">
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <!-- Name -->
+              <div>
+                <label for="contact-name" class="block text-white/60 text-xs font-medium mb-1.5" data-i18n="contact.name">
+                  Nama Lengkap <span class="text-red-400">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  required
+                  minlength="2"
+                  class="form-input w-full"
+                  placeholder="Masukkan nama Anda"
+                  data-ph-id="Masukkan nama Anda"
+                  data-ph-en="Enter your name"
+                  autocomplete="name"
+                />
+                <p class="field-error hidden text-red-400 text-xs mt-1" id="name-error" role="alert"></p>
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label for="contact-email" class="block text-white/60 text-xs font-medium mb-1.5" data-i18n="contact.email">
+                  Email <span class="text-red-400">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  required
+                  class="form-input w-full"
+                  placeholder="nama@domain.com"
+                  autocomplete="email"
+                />
+                <p class="field-error hidden text-red-400 text-xs mt-1" id="email-error" role="alert"></p>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="mb-5">
+              <label for="contact-message" class="block text-white/60 text-xs font-medium mb-1.5" data-i18n="contact.message">
+                Pesan <span class="text-red-400">*</span>
+              </label>
+              <textarea
+                id="contact-message"
+                name="message"
+                required
+                minlength="10"
+                rows="5"
+                class="form-input w-full resize-none"
+                placeholder="Tuliskan pesan atau pertanyaan Anda..."
+                data-ph-id="Tuliskan pesan atau pertanyaan Anda..."
+                data-ph-en="Write your message or question here..."
+              ></textarea>
+              <p class="field-error hidden text-red-400 text-xs mt-1" id="message-error" role="alert"></p>
+            </div>
+
+            <!-- Error banner -->
+            <div id="form-error" class="hidden mb-4 p-3 rounded-lg bg-red-500/10 border border-red-500/25 text-red-400 text-sm" role="alert">
+              <span data-i18n="contact.error">Gagal mengirim. Coba lagi atau hubungi via email langsung.</span>
+            </div>
+
+            <!-- Submit -->
+            <button
+              type="submit"
+              id="submit-btn"
+              class="btn-primary w-full justify-center py-3"
+            >
+              <svg id="btn-icon-send" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+              </svg>
+              <svg id="btn-icon-loading" class="hidden w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+              </svg>
+              <span id="btn-label" data-i18n="contact.send">Kirim Pesan</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .form-input {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.625rem;
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+    color: white;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+    font-family: inherit;
+  }
+  .form-input::placeholder { color: rgba(255, 255, 255, 0.25); }
+  .form-input:focus {
+    border-color: rgba(59, 130, 246, 0.5);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  .form-input.error {
+    border-color: rgba(239, 68, 68, 0.5);
+  }
+</style>
+
+<script define:vars={{ FORMSPREE_URL }}>
+  const form        = document.getElementById('contact-form');
+  const successDiv  = document.getElementById('form-success');
+  const errorBanner = document.getElementById('form-error');
+  const submitBtn   = document.getElementById('submit-btn');
+  const btnLabel    = document.getElementById('btn-label');
+  const btnIconSend = document.getElementById('btn-icon-send');
+  const btnIconLoad = document.getElementById('btn-icon-loading');
+  const resetBtn    = document.getElementById('form-reset');
+
+  // ── Validation ───────────────────────────────────
+  function validateField(id, errorId, message) {
+    const el = document.getElementById(id);
+    const errEl = document.getElementById(errorId);
+    if (!el || !errEl) return true;
+    const valid = el.validity.valid;
+    el.classList.toggle('error', !valid);
+    errEl.classList.toggle('hidden', valid);
+    errEl.textContent = valid ? '' : message;
+    return valid;
+  }
+
+  // ── Submit ───────────────────────────────────────
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const lang = document.documentElement.lang ?? 'id';
+    const labels = {
+      nameReq:    lang === 'en' ? 'Name is required (min. 2 characters)' : 'Nama wajib diisi (min. 2 karakter)',
+      emailReq:   lang === 'en' ? 'Please enter a valid email address'    : 'Masukkan alamat email yang valid',
+      msgReq:     lang === 'en' ? 'Message must be at least 10 characters': 'Pesan minimal 10 karakter',
+      sending:    lang === 'en' ? 'Sending...'  : 'Mengirim...',
+      send:       lang === 'en' ? 'Send Message': 'Kirim Pesan',
+    };
+
+    const v1 = validateField('contact-name',    'name-error',    labels.nameReq);
+    const v2 = validateField('contact-email',   'email-error',   labels.emailReq);
+    const v3 = validateField('contact-message', 'message-error', labels.msgReq);
+
+    if (!v1 || !v2 || !v3) return;
+
+    // Set loading state
+    submitBtn.disabled = true;
+    btnLabel.textContent = labels.sending;
+    btnIconSend.classList.add('hidden');
+    btnIconLoad.classList.remove('hidden');
+    errorBanner.classList.add('hidden');
+
+    try {
+      const data = new FormData(form);
+      const res = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+
+      if (res.ok) {
+        form.classList.add('hidden');
+        successDiv?.classList.remove('hidden');
+      } else {
+        errorBanner?.classList.remove('hidden');
+      }
+    } catch {
+      errorBanner?.classList.remove('hidden');
+    } finally {
+      submitBtn.disabled = false;
+      btnLabel.textContent = labels.send;
+      btnIconSend.classList.remove('hidden');
+      btnIconLoad.classList.add('hidden');
+    }
+  });
+
+  // ── Reset ─────────────────────────────────────────
+  resetBtn?.addEventListener('click', () => {
+    form?.reset();
+    form?.classList.remove('hidden');
+    successDiv?.classList.add('hidden');
+    errorBanner?.classList.add('hidden');
+    document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+    document.querySelectorAll('.field-error').forEach(el => el.classList.add('hidden'));
+  });
+
+  // ── Clear error on input ─────────────────────────
+  ['contact-name','contact-email','contact-message'].forEach(id => {
+    document.getElementById(id)?.addEventListener('input', () => {
+      const el = document.getElementById(id);
+      if (el?.validity.valid) {
+        el.classList.remove('error');
+        document.getElementById(`${id.replace('contact-','')}-error`)?.classList.add('hidden');
+      }
+    });
+  });
+</script>

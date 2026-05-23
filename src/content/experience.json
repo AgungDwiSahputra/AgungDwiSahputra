@@ -1,0 +1,147 @@
+{
+  "work": [
+    {
+      "id": "de-kreatif",
+      "role": "Web Programmer",
+      "company": "CV. De Kreatif Tri Dewata",
+      "location": "South Jakarta",
+      "period": "Jan 2026 – Present",
+      "startYear": 2026,
+      "endYear": null,
+      "current": true,
+      "highlights": [
+        "Membangun dan mengembangkan aplikasi web sesuai kebutuhan klien",
+        "Berkolaborasi dengan tim untuk menghasilkan produk berkualitas tinggi",
+        "Menerapkan best practice dalam pengembangan frontend dan backend"
+      ],
+      "tags": ["Web Development", "Laravel", "TailwindCSS"]
+    },
+    {
+      "id": "kelas-webdev",
+      "role": "Web Developer",
+      "company": "Kelas.com",
+      "location": "DKI Jakarta",
+      "period": "May 2024 – Jan 2026",
+      "startYear": 2024,
+      "endYear": 2026,
+      "current": false,
+      "highlights": [
+        "Reduced feature development cycle time by 25% via reusable code components",
+        "Achieved 99.95% system uptime through proactive monitoring of 50+ critical bugs/quarter",
+        "Improved Lighthouse page speed score from 54 → 90/100 via asset optimization",
+        "Reduced server response time by 60% (2.1s → 0.8s) via database query optimization"
+      ],
+      "tags": ["Web Development", "Performance Optimization", "Bug Fixing"]
+    },
+    {
+      "id": "kelas-webdev-contract",
+      "role": "Web Developer",
+      "company": "Kelas.com",
+      "location": "DKI Jakarta",
+      "period": "Feb 2024 – May 2024",
+      "startYear": 2024,
+      "endYear": 2024,
+      "current": false,
+      "highlights": [
+        "Build and customize products according to product requirements",
+        "Proactively provide suggestions and innovative ideas for product development",
+        "Execute various optimization initiatives to enhance speed, responsiveness, and user experience"
+      ],
+      "tags": ["Web Development", "UI/UX", "Optimization"]
+    },
+    {
+      "id": "kelas-intern",
+      "role": "Web Developer Internship",
+      "company": "Kelas.com",
+      "location": "Jakarta Barat",
+      "period": "Feb 2023 – Feb 2024",
+      "startYear": 2023,
+      "endYear": 2024,
+      "current": false,
+      "highlights": [
+        "Assist in development and customization of products as directed by the team",
+        "Contribute ideas for product innovation and participate in cross-department meetings",
+        "Perform optimization tasks to enhance speed and user experience"
+      ],
+      "tags": ["Web Development", "Internship", "Learning"]
+    },
+    {
+      "id": "freelance",
+      "role": "Freelance Web Developer",
+      "company": "Self-employed",
+      "location": "Indonesia",
+      "period": "Jan 2022 – Present",
+      "startYear": 2022,
+      "endYear": null,
+      "current": true,
+      "highlights": [
+        "Led teams of 3–6 people to complete website projects",
+        "Maintained 98% client satisfaction rate across managed projects",
+        "Increased mobile conversion rate by 22% through responsive redesign",
+        "Delivered 2+ complex design projects ($100–$500 budget) with 95% client approval on first submission",
+        "Achieved 100% deadline compliance across all projects"
+      ],
+      "tags": ["Freelance", "Laravel", "TailwindCSS", "Bootstrap"]
+    },
+    {
+      "id": "am-store",
+      "role": "Graphic Designer",
+      "company": "Am Store",
+      "location": "Jatisari, West Java",
+      "period": "Sep 2020 – Sep 2022",
+      "startYear": 2020,
+      "endYear": 2022,
+      "current": false,
+      "highlights": [
+        "Designed 126+ projects: banners, book covers, posters, logos, business cards using CorelDraw",
+        "Actively applied the latest design trends to generate creative and relevant ideas",
+        "Consistently produced 3–5 designs per day across various media types"
+      ],
+      "tags": ["Graphic Design", "CorelDraw", "Branding"]
+    },
+    {
+      "id": "systemrisa",
+      "role": "Founder",
+      "company": "Systemrisa Store",
+      "location": "West Java, Indonesia",
+      "period": "Jan 2020 – Jan 2022",
+      "startYear": 2020,
+      "endYear": 2022,
+      "current": false,
+      "highlights": [
+        "Built a self-sustaining website system handling bookings, payments, and content updates",
+        "Reduced operational costs by 50% through workflow automation and optimized hosting",
+        "Improved SEO visibility by 65% with structured data implementation",
+        "Enhanced page performance by 55% (3.2s → 1.4s) using image compression and CDN",
+        "Increased mobile responsiveness score from 68 → 89/100"
+      ],
+      "tags": ["Laravel", "TailwindCSS", "SEO", "Full-Stack", "Entrepreneurship"]
+    }
+  ],
+  "education": [
+    {
+      "id": "esa-unggul",
+      "degree": "Bachelor's Degree",
+      "field": "Information Systems",
+      "institution": "Universitas Esa Unggul",
+      "period": "Sep 2020 – Feb 2024",
+      "startYear": 2020,
+      "endYear": 2024
+    },
+    {
+      "id": "smkn1-banyusari",
+      "degree": "Vocational High School",
+      "field": "Computer Software Engineering",
+      "institution": "SMK Negeri 1 Banyusari",
+      "period": "Jun 2017 – Jun 2020",
+      "startYear": 2017,
+      "endYear": 2020
+    }
+  ],
+  "certifications": [
+    "Certificate of Competence in System Analyst — KPN Plantations (BNSP)",
+    "Gemastic Contest",
+    "Memahami Asynchronous Javascript",
+    "Juara Caraka 3 LKBB 'Jangkar Samudra 2' Se-Jawa Barat"
+  ]
+}

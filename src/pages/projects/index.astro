@@ -1,0 +1,129 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ui/ProjectCard.astro';
+
+const allProjects = await getCollection('projects');
+const sorted = allProjects.sort((a, b) => b.data.year - a.data.year);
+
+const categories = ['Semua', ...new Set(sorted.map(p => p.data.category))];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout
+  title="Proyek — Agung Dwi Sahputra"
+  description="Katalog proyek web development dan GIS yang telah dikerjakan oleh Agung Dwi Sahputra."
+>
+  <section class="pt-28 pb-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Page header -->
+      <div class="mb-12" data-animate>
+        <a
+          href={base || '/'}
+          class="inline-flex items-center gap-2 text-white/40 hover:text-blue-400 text-sm mb-6 transition-colors"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+          </svg>
+          Kembali ke Beranda
+        </a>
+        <p class="section-label">Portfolio</p>
+        <h1 class="text-3xl lg:text-4xl font-bold text-white">Semua Proyek</h1>
+        <p class="text-white/45 mt-2 text-sm">
+          {sorted.length} proyek · Web Development, GIS, dan lebih banyak lagi.
+        </p>
+      </div>
+
+      <!-- Filter chips -->
+      <div
+        class="flex flex-wrap gap-2 mb-10"
+        id="filter-chips"
+        role="group"
+        aria-label="Filter kategori proyek"
+        data-animate
+        data-delay="100"
+      >
+        {categories.map(cat => (
+          <button
+            class="filter-chip px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 border"
+            data-filter={cat}
+            aria-pressed={cat === 'Semua' ? 'true' : 'false'}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <!-- Projects grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+        {sorted.map(project => (
+          <div class="project-item" data-category={project.data.category} data-animate>
+            <ProjectCard
+              title={project.data.title}
+              description={project.data.description}
+              category={project.data.category}
+              tags={project.data.tags}
+              year={project.data.year}
+              slug={project.id}
+              thumbnail={project.data.thumbnail}
+              liveUrl={project.data.liveUrl}
+              repoUrl={project.data.repoUrl}
+              featured={project.data.featured}
+            />
+          </div>
+        ))}
+      </div>
+
+      <!-- Empty state -->
+      <div id="empty-state" class="hidden text-center py-20" aria-live="polite">
+        <p class="text-white/30 text-sm">Tidak ada proyek untuk kategori ini.</p>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .filter-chip {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .filter-chip:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .filter-chip[aria-pressed="true"] {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.4);
+    color: #93c5fd;
+  }
+  .project-item.hidden-item {
+    display: none;
+  }
+</style>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>('.filter-chip');
+  const items = document.querySelectorAll<HTMLElement>('.project-item');
+  const emptyState = document.getElementById('empty-state');
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const filter = chip.dataset.filter ?? 'Semua';
+
+      chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+      chip.setAttribute('aria-pressed', 'true');
+
+      let visibleCount = 0;
+      items.forEach(item => {
+        const match = filter === 'Semua' || item.dataset.category === filter;
+        item.classList.toggle('hidden-item', !match);
+        if (match) visibleCount++;
+      });
+
+      emptyState?.classList.toggle('hidden', visibleCount > 0);
+    });
+  });
+</script>
