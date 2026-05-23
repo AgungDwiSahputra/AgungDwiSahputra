@@ -1,119 +1,72 @@
 {
   "work": [
     {
-      "id": "de-kreatif",
-      "role": "Web Programmer",
-      "company": "CV. De Kreatif Tri Dewata",
+      "id": "kpn-plantations",
+      "role": "GIS Web Programming",
+      "company": "KPN Plantations",
       "location": "South Jakarta",
       "period": "Jan 2026 – Present",
       "startYear": 2026,
       "endYear": null,
       "current": true,
       "highlights": [
-        "Membangun dan mengembangkan aplikasi web sesuai kebutuhan klien",
-        "Berkolaborasi dengan tim untuk menghasilkan produk berkualitas tinggi",
-        "Menerapkan best practice dalam pengembangan frontend dan backend"
+        "Developing a GIS website to monitor oil palm plantations in various regions",
+        "Actively discuss with superiors regarding future website development for smooth management of oil palm trees",
+        "Creating a DJI Dock 3 reporting system using data from the DJI Flighthub 2 API"
       ],
-      "tags": ["Web Development", "Laravel", "TailwindCSS"]
+      "tags": ["GIS", "Web Development", "API Integration", "DJI Flighthub"]
     },
     {
-      "id": "kelas-webdev",
+      "id": "mega-harapan",
       "role": "Web Developer",
-      "company": "Kelas.com",
-      "location": "DKI Jakarta",
-      "period": "May 2024 – Jan 2026",
-      "startYear": 2024,
+      "company": "PT. Mega Harapan Mulia",
+      "location": "Jakarta Barat",
+      "period": "Feb 2023 – Jan 2026",
+      "startYear": 2023,
       "endYear": 2026,
       "current": false,
       "highlights": [
-        "Reduced feature development cycle time by 25% via reusable code components",
-        "Achieved 99.95% system uptime through proactive monitoring of 50+ critical bugs/quarter",
-        "Improved Lighthouse page speed score from 54 → 90/100 via asset optimization",
-        "Reduced server response time by 60% (2.1s → 0.8s) via database query optimization"
+        "Build and customize products according to product requirements, ensuring all features function seamlessly and meet end-user expectations",
+        "Reduced feature development cycle time by 25% by implementing reusable code components",
+        "Achieved 99.95% system uptime through proactive monitoring and resolution of 50+ critical bugs quarterly",
+        "Improved desktop page speed score from 54 to 86/100 (Google Lighthouse) through asset optimization",
+        "Reduced server response time by 60% (from 2.1s to 0.8s) via database query optimization"
       ],
-      "tags": ["Web Development", "Performance Optimization", "Bug Fixing"]
+      "tags": ["Web Development", "Laravel", "Performance Optimization", "Bug Fixing"]
     },
     {
-      "id": "kelas-webdev-contract",
-      "role": "Web Developer",
-      "company": "Kelas.com",
-      "location": "DKI Jakarta",
-      "period": "Feb 2024 – May 2024",
-      "startYear": 2024,
-      "endYear": 2024,
-      "current": false,
-      "highlights": [
-        "Build and customize products according to product requirements",
-        "Proactively provide suggestions and innovative ideas for product development",
-        "Execute various optimization initiatives to enhance speed, responsiveness, and user experience"
-      ],
-      "tags": ["Web Development", "UI/UX", "Optimization"]
-    },
-    {
-      "id": "kelas-intern",
-      "role": "Web Developer Internship",
-      "company": "Kelas.com",
-      "location": "Jakarta Barat",
-      "period": "Feb 2023 – Feb 2024",
-      "startYear": 2023,
-      "endYear": 2024,
-      "current": false,
-      "highlights": [
-        "Assist in development and customization of products as directed by the team",
-        "Contribute ideas for product innovation and participate in cross-department meetings",
-        "Perform optimization tasks to enhance speed and user experience"
-      ],
-      "tags": ["Web Development", "Internship", "Learning"]
-    },
-    {
-      "id": "freelance",
-      "role": "Freelance Web Developer",
-      "company": "Self-employed",
+      "id": "de-kreatif",
+      "role": "Web Developer (Freelance - Remote)",
+      "company": "CV. De Kreatif Tri Dewata",
       "location": "Indonesia",
       "period": "Jan 2022 – Present",
       "startYear": 2022,
       "endYear": null,
       "current": true,
       "highlights": [
-        "Led teams of 3–6 people to complete website projects",
-        "Maintained 98% client satisfaction rate across managed projects",
-        "Increased mobile conversion rate by 22% through responsive redesign",
-        "Delivered 2+ complex design projects ($100–$500 budget) with 95% client approval on first submission",
-        "Achieved 100% deadline compliance across all projects"
+        "Lead a team of 3-6 people to assist in the completion of website projects",
+        "Maintained 98% client satisfaction rate across managed projects via rigorous quality assurance protocols",
+        "Increased mobile conversion rate by 22% through responsive redesign focusing on core user journeys",
+        "Delivered 2+ complex design projects (budget range: $100–$500) with 95% client approval on first submission",
+        "Achieved 100% deadline compliance of the projects undertaken"
       ],
-      "tags": ["Freelance", "Laravel", "TailwindCSS", "Bootstrap"]
-    },
-    {
-      "id": "am-store",
-      "role": "Graphic Designer",
-      "company": "Am Store",
-      "location": "Jatisari, West Java",
-      "period": "Sep 2020 – Sep 2022",
-      "startYear": 2020,
-      "endYear": 2022,
-      "current": false,
-      "highlights": [
-        "Designed 126+ projects: banners, book covers, posters, logos, business cards using CorelDraw",
-        "Actively applied the latest design trends to generate creative and relevant ideas",
-        "Consistently produced 3–5 designs per day across various media types"
-      ],
-      "tags": ["Graphic Design", "CorelDraw", "Branding"]
+      "tags": ["Freelance", "Laravel", "TailwindCSS", "Team Lead"]
     },
     {
       "id": "systemrisa",
       "role": "Founder",
       "company": "Systemrisa Store",
-      "location": "West Java, Indonesia",
+      "location": "Indonesia",
       "period": "Jan 2020 – Jan 2022",
       "startYear": 2020,
       "endYear": 2022,
       "current": false,
       "highlights": [
-        "Built a self-sustaining website system handling bookings, payments, and content updates",
-        "Reduced operational costs by 50% through workflow automation and optimized hosting",
-        "Improved SEO visibility by 65% with structured data implementation",
-        "Enhanced page performance by 55% (3.2s → 1.4s) using image compression and CDN",
-        "Increased mobile responsiveness score from 68 → 89/100"
+        "Built a self-sustaining website system handling bookings, payments, and content updates with minimal manual intervention",
+        "Reduced operational costs by 50% through workflow automation and optimized hosting configurations",
+        "Improved SEO visibility by 65% with structured data implementation, page speed optimization, and mobile-first design",
+        "Enhanced page performance by 55% (3.2s → 1.4s) using image compression, caching strategies, and CDN integration",
+        "Increased mobile responsiveness score from 68 to 89/100 (Google Mobile-Friendly Test)"
       ],
       "tags": ["Laravel", "TailwindCSS", "SEO", "Full-Stack", "Entrepreneurship"]
     }
@@ -139,9 +92,36 @@
     }
   ],
   "certifications": [
-    "Certificate of Competence in System Analyst — KPN Plantations (BNSP)",
-    "Gemastic Contest",
-    "Memahami Asynchronous Javascript",
-    "Juara Caraka 3 LKBB 'Jangkar Samudra 2' Se-Jawa Barat"
+    "Hard Skills (2024): Certificate of Competence in System Analyst — BNSP",
+    "Honors & Awards (2024): Best Graduate, GPA 3.95 — Universitas Esa Unggul",
+    "Honors & Awards (2020): Chairman of OSIS 2017/2018 — SMKN 1 Banyusari",
+    "Achievements (2023): MSIB Certificate of Website Development — Hacktiv8 Indonesia",
+    "Achievements (2024): MSIB Certificate of Website Development — PT. Mega Harapan Mulia (Kelas.com)"
+  ],
+  "organizational": [
+    {
+      "id": "neighborhood-youth",
+      "role": "Head of Communication and Information Division",
+      "organization": "Neighborhood Youth Association",
+      "location": "Karawang, Indonesia",
+      "period": "Jun 2020 – Jun 2023",
+      "description": "Led the communication and information division, producing documentaries and publishing media coverage of organizational events to the public."
+    },
+    {
+      "id": "student-assoc-ueu",
+      "role": "Head/Coordinator of PSDM Division",
+      "organization": "Student Association Majors — Universitas Esa Unggul",
+      "location": "Jakarta",
+      "period": "Nov 2021 – Nov 2022",
+      "description": "Led the Student Resource Development division, aligning the division's vision and mission with the association's work programs and chairman's directives."
+    },
+    {
+      "id": "osis-smkn1",
+      "role": "Chairman of the Student Body",
+      "organization": "OSIS — SMK Negeri 1 Banyusari",
+      "location": "Karawang",
+      "period": "Sep 2017 – Sep 2018",
+      "description": "Led the student organization by prioritizing discipline, tidiness, cleanliness, activeness, and piety — fostering a culture of excellence."
+    }
   ]
 }

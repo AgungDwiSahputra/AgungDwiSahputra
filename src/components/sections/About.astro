@@ -2,7 +2,7 @@
 import experienceData from '../../content/experience.json';
 import profileData from '../../content/profile.json';
 
-const { work, education, certifications } = experienceData;
+const { work, education, certifications, organizational } = experienceData;
 const currentJobs = work.filter(j => j.current);
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
@@ -62,6 +62,26 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               </li>
             ))}
           </ul>
+        </div>
+
+        <!-- Organizational Experience -->
+        <div class="glass glass-hover rounded-2xl p-6" data-animate data-delay="150">
+          <h3 class="text-white font-semibold text-sm mb-4 flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Pengalaman Organisasi
+          </h3>
+          <div class="space-y-4">
+            {organizational.map(org => (
+              <div class="border-l-2 border-green-500/30 pl-3">
+                <p class="text-white/80 text-sm font-medium leading-snug">{org.role}</p>
+                <p class="text-green-400/80 text-xs mt-0.5">{org.organization}</p>
+                <p class="text-white/30 text-xs">{org.period}</p>
+                <p class="text-white/45 text-xs leading-relaxed mt-1">{org.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <!-- Education -->
