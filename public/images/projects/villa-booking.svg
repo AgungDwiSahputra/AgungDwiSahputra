@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <defs>
+    <linearGradient id="bg-vb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020d10"/>
+      <stop offset="100%" stop-color="#041a20"/>
+    </linearGradient>
+    <linearGradient id="accent-vb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <linearGradient id="bar-vb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="sky-vb" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="glow-vb" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="440" fill="url(#bg-vb)"/>
+
+  <!-- Stars -->
+  <g fill="rgba(186,230,253,0.35)">
+    <circle cx="60" cy="40" r="1"/><circle cx="140" cy="65" r="1.5"/><circle cx="90" cy="100" r="1"/>
+    <circle cx="710" cy="35" r="1.5"/><circle cx="760" cy="80" r="1"/><circle cx="730" cy="110" r="1.5"/>
+    <circle cx="50" cy="370" r="1"/><circle cx="120" cy="350" r="1.5"/>
+    <circle cx="680" cy="370" r="1.5"/><circle cx="750" cy="350" r="1"/>
+  </g>
+
+  <ellipse cx="400" cy="210" rx="280" ry="160" fill="url(#glow-vb)"/>
+
+  <!-- Left card: Booking Conversion -->
+  <rect x="72" y="145" width="148" height="145" rx="10"
+        fill="rgba(255,255,255,0.03)" stroke="rgba(2,132,199,0.25)" stroke-width="1"/>
+  <text x="146" y="173" font-family="Inter, system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.28)" text-anchor="middle">DIRECT BOOKING</text>
+  <text x="146" y="213" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="800"
+        fill="url(#accent-vb)" text-anchor="middle">↑ Rate</text>
+  <rect x="92" y="226" width="108" height="5" rx="2.5" fill="rgba(255,255,255,0.06)"/>
+  <rect x="92" y="226" width="88" height="5" rx="2.5" fill="url(#bar-vb)"/>
+  <text x="146" y="250" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(56,189,248,0.7)" text-anchor="middle">Konversi reservasi</text>
+  <text x="146" y="266" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.3)" text-anchor="middle">Langsung meningkat</text>
+
+  <!-- Right card: Responsive UX -->
+  <rect x="580" y="145" width="148" height="145" rx="10"
+        fill="rgba(255,255,255,0.03)" stroke="rgba(2,132,199,0.25)" stroke-width="1"/>
+  <text x="654" y="173" font-family="Inter, system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.28)" text-anchor="middle">RESPONSIVE UX</text>
+  <!-- Device frames (mobile + desktop) -->
+  <!-- Desktop -->
+  <rect x="616" y="190" width="50" height="34" rx="3" fill="rgba(2,132,199,0.2)" stroke="rgba(56,189,248,0.4)" stroke-width="1.5"/>
+  <rect x="638" y="227" width="6" height="4" rx="1" fill="rgba(56,189,248,0.4)"/>
+  <!-- Mobile -->
+  <rect x="672" y="194" width="22" height="36" rx="3" fill="rgba(2,132,199,0.3)" stroke="rgba(56,189,248,0.5)" stroke-width="1.5"/>
+  <circle cx="683" cy="228" r="2" fill="rgba(56,189,248,0.5)"/>
+  <text x="654" y="250" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(56,189,248,0.7)" text-anchor="middle">Mobile / Desktop</text>
+  <text x="654" y="265" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.3)" text-anchor="middle">Pengalaman mulus</text>
+
+  <!-- Central card -->
+  <rect x="222" y="110" width="356" height="218" rx="16"
+        fill="rgba(255,255,255,0.04)" stroke="rgba(2,132,199,0.3)" stroke-width="1"/>
+
+  <!-- Mountain + villa icon -->
+  <g transform="translate(366, 128)">
+    <!-- Sky/background -->
+    <rect x="0" y="0" width="68" height="56" rx="4" fill="url(#sky-vb)"/>
+    <!-- Mountain left -->
+    <polygon points="0,56 22,20 44,56" fill="rgba(2,132,199,0.3)" stroke="rgba(56,189,248,0.4)" stroke-width="1"/>
+    <!-- Mountain right (bigger) -->
+    <polygon points="18,56 44,10 70,56" fill="rgba(2,132,199,0.4)" stroke="rgba(56,189,248,0.5)" stroke-width="1"/>
+    <!-- Snow cap -->
+    <polygon points="40,12 44,10 48,12 44,18" fill="rgba(186,230,253,0.6)"/>
+    <!-- Villa house -->
+    <rect x="6" y="40" width="20" height="16" rx="2" fill="rgba(14,165,233,0.45)" stroke="rgba(56,189,248,0.6)" stroke-width="1"/>
+    <polygon points="4,42 16,34 28,42" fill="rgba(14,165,233,0.6)" stroke="rgba(56,189,248,0.6)" stroke-width="1"/>
+    <!-- Window -->
+    <rect x="10" y="44" width="6" height="6" rx="1" fill="rgba(252,211,77,0.5)"/>
+  </g>
+
+  <text x="400" y="222" font-family="Inter, system-ui, sans-serif" font-size="17"
+        font-weight="700" fill="rgba(255,255,255,0.92)" text-anchor="middle">Villa Hotel Dieng</text>
+  <text x="400" y="245" font-family="Inter, system-ui, sans-serif" font-size="10"
+        fill="rgba(56,189,248,0.82)" text-anchor="middle" letter-spacing="2">BOOKING SYSTEM · UI/UX · RESPONSIVE</text>
+
+  <!-- Tech badges -->
+  <g transform="translate(258, 274)">
+    <rect x="0" y="0" width="48" height="20" rx="10" fill="rgba(2,132,199,0.15)" stroke="rgba(2,132,199,0.35)" stroke-width="1"/>
+    <text x="24" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="rgba(56,189,248,0.95)" text-anchor="middle">Laravel</text>
+    <rect x="56" y="0" width="42" height="20" rx="10" fill="rgba(2,132,199,0.15)" stroke="rgba(2,132,199,0.35)" stroke-width="1"/>
+    <text x="77" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="rgba(56,189,248,0.95)" text-anchor="middle">MySQL</text>
+    <rect x="106" y="0" width="50" height="20" rx="10" fill="rgba(2,132,199,0.15)" stroke="rgba(2,132,199,0.35)" stroke-width="1"/>
+    <text x="131" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="rgba(56,189,248,0.95)" text-anchor="middle">UI/UX</text>
+  </g>
+
+  <text x="400" y="420" font-family="Inter, system-ui, sans-serif" font-size="10"
+        fill="rgba(255,255,255,0.18)" text-anchor="middle">Agung Dwi Sahputra · Portfolio</text>
+</svg>

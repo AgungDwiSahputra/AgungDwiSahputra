@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <defs>
+    <linearGradient id="bg-pm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0700"/>
+      <stop offset="100%" stop-color="#1a0d00"/>
+    </linearGradient>
+    <linearGradient id="accent-pm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="bar-pm" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="glow-pm" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="440" fill="url(#bg-pm)"/>
+
+  <!-- Diamond pattern -->
+  <g stroke="rgba(251,146,60,0.06)" stroke-width="1" fill="none">
+    <rect x="30" y="30" width="40" height="40" transform="rotate(45 50 50)"/>
+    <rect x="80" y="30" width="40" height="40" transform="rotate(45 100 50)"/>
+    <rect x="670" y="30" width="40" height="40" transform="rotate(45 690 50)"/>
+    <rect x="720" y="30" width="40" height="40" transform="rotate(45 740 50)"/>
+    <rect x="30" y="340" width="40" height="40" transform="rotate(45 50 360)"/>
+    <rect x="670" y="340" width="40" height="40" transform="rotate(45 690 360)"/>
+  </g>
+
+  <ellipse cx="400" cy="210" rx="280" ry="160" fill="url(#glow-pm)"/>
+
+  <!-- Left card: Leads / CRM -->
+  <rect x="72" y="145" width="148" height="145" rx="10"
+        fill="rgba(255,255,255,0.03)" stroke="rgba(234,88,12,0.25)" stroke-width="1"/>
+  <text x="146" y="173" font-family="Inter, system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.28)" text-anchor="middle">LEAD GENERATION</text>
+  <text x="146" y="213" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="800"
+        fill="url(#accent-pm)" text-anchor="middle">CRM</text>
+  <rect x="92" y="226" width="108" height="5" rx="2.5" fill="rgba(255,255,255,0.06)"/>
+  <rect x="92" y="226" width="85" height="5" rx="2.5" fill="url(#bar-pm)"/>
+  <text x="146" y="250" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(251,146,60,0.7)" text-anchor="middle">Prospek → Klien aktif</text>
+  <text x="146" y="266" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.3)" text-anchor="middle">Otomatisasi alur</text>
+
+  <!-- Right card: ROI / Campaign -->
+  <rect x="580" y="145" width="148" height="145" rx="10"
+        fill="rgba(255,255,255,0.03)" stroke="rgba(234,88,12,0.25)" stroke-width="1"/>
+  <text x="654" y="173" font-family="Inter, system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.28)" text-anchor="middle">ROI TRACKING</text>
+  <!-- Upward trend chart -->
+  <polyline points="604,240 624,232 644,222 664,210 684,198 704,188"
+            stroke="url(#bar-pm)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="704" cy="188" r="4" fill="rgba(251,146,60,0.9)"/>
+  <polyline points="604,240 624,232 644,222 664,210 684,198 704,188 704,250 604,250"
+            stroke="none" fill="rgba(234,88,12,0.1)"/>
+  <text x="654" y="262" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(251,146,60,0.7)" text-anchor="middle">Efektivitas kampanye</text>
+  <text x="654" y="277" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.3)" text-anchor="middle">Real-time analytics</text>
+
+  <!-- Central card -->
+  <rect x="222" y="110" width="356" height="218" rx="16"
+        fill="rgba(255,255,255,0.04)" stroke="rgba(234,88,12,0.3)" stroke-width="1"/>
+
+  <!-- Megaphone icon -->
+  <g transform="translate(375, 133)">
+    <!-- Megaphone body -->
+    <path d="M8 20 L8 36 L16 36 L16 20 Z" fill="rgba(234,88,12,0.5)" stroke="rgba(251,146,60,0.6)" stroke-width="1.5"/>
+    <!-- Horn -->
+    <path d="M16 16 L42 8 L42 44 L16 36 Z" fill="rgba(234,88,12,0.35)" stroke="rgba(251,146,60,0.55)" stroke-width="1.5"/>
+    <!-- Sound waves -->
+    <path d="M46 18 C52 22 52 34 46 38" stroke="rgba(251,146,60,0.7)" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M50 13 C60 19 60 37 50 43" stroke="rgba(251,146,60,0.4)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <text x="400" y="222" font-family="Inter, system-ui, sans-serif" font-size="17"
+        font-weight="700" fill="rgba(255,255,255,0.92)" text-anchor="middle">Marketing PTC</text>
+  <text x="400" y="245" font-family="Inter, system-ui, sans-serif" font-size="10"
+        fill="rgba(251,146,60,0.82)" text-anchor="middle" letter-spacing="2">MARTECH · CRM · CAMPAIGN ANALYTICS</text>
+
+  <!-- Tech badges -->
+  <g transform="translate(258, 274)">
+    <rect x="0" y="0" width="48" height="20" rx="10" fill="rgba(234,88,12,0.15)" stroke="rgba(234,88,12,0.35)" stroke-width="1"/>
+    <text x="24" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="rgba(251,146,60,0.95)" text-anchor="middle">Laravel</text>
+    <rect x="56" y="0" width="42" height="20" rx="10" fill="rgba(234,88,12,0.15)" stroke="rgba(234,88,12,0.35)" stroke-width="1"/>
+    <text x="77" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="rgba(251,146,60,0.95)" text-anchor="middle">MySQL</text>
+    <rect x="106" y="0" width="30" height="20" rx="10" fill="rgba(234,88,12,0.15)" stroke="rgba(234,88,12,0.35)" stroke-width="1"/>
+    <text x="121" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="rgba(251,146,60,0.95)" text-anchor="middle">CRM</text>
+  </g>
+
+  <text x="400" y="420" font-family="Inter, system-ui, sans-serif" font-size="10"
+        fill="rgba(255,255,255,0.18)" text-anchor="middle">Agung Dwi Sahputra · Portfolio</text>
+</svg>
