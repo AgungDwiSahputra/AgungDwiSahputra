@@ -7,7 +7,7 @@ tags: ["ASP.NET", "C#", "SQL Server", "GIS", "Leaflet.js", "TailwindCSS"]
 year: 2025
 status: "completed"
 featured: true
-thumbnail: "/images/projects/aset-water.jpg"
+thumbnail: "/images/projects/aset-water.svg"
 liveUrl: ""
 repoUrl: ""
 outcomes:

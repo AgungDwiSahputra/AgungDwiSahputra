@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <defs>
+    <linearGradient id="bg-sr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04051a"/>
+      <stop offset="100%" stop-color="#0f0a2e"/>
+    </linearGradient>
+    <linearGradient id="accent-sr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="bar-sr" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="65%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="glow-sr" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="440" fill="url(#bg-sr)"/>
+
+  <!-- Background hex pattern -->
+  <g stroke="rgba(139,92,246,0.06)" stroke-width="1" fill="none">
+    <polygon points="60,30 90,15 120,30 120,60 90,75 60,60"/>
+    <polygon points="120,30 150,15 180,30 180,60 150,75 120,60"/>
+    <polygon points="60,90 90,75 120,90 120,120 90,135 60,120"/>
+    <polygon points="640,300 670,285 700,300 700,330 670,345 640,330"/>
+    <polygon points="700,300 730,285 760,300 760,330 730,345 700,330"/>
+    <polygon points="640,360 670,345 700,360 700,390 670,405 640,390"/>
+    <polygon points="700,360 730,345 760,360 760,390 730,405 700,390"/>
+  </g>
+
+  <!-- Glow -->
+  <ellipse cx="400" cy="210" rx="270" ry="165" fill="url(#glow-sr)"/>
+
+  <!-- Left mini card: SEO stats -->
+  <rect x="72" y="150" width="148" height="140" rx="10"
+        fill="rgba(255,255,255,0.03)" stroke="rgba(139,92,246,0.2)" stroke-width="1"/>
+  <text x="146" y="178" font-family="Inter, system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.28)" text-anchor="middle">SEO VISIBILITY</text>
+  <text x="146" y="215" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="800"
+        fill="url(#accent-sr)" text-anchor="middle">+65%</text>
+  <!-- Mini bar chart -->
+  <rect x="86" y="228" width="20" height="28" rx="3" fill="rgba(139,92,246,0.25)"/>
+  <rect x="110" y="218" width="20" height="38" rx="3" fill="rgba(139,92,246,0.35)"/>
+  <rect x="134" y="210" width="20" height="46" rx="3" fill="rgba(139,92,246,0.5)"/>
+  <rect x="158" y="200" width="20" height="56" rx="3" fill="url(#bar-sr)"/>
+  <text x="146" y="274" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(167,139,250,0.7)" text-anchor="middle">Structured Data + CDN</text>
+
+  <!-- Right mini card: metrics -->
+  <rect x="580" y="150" width="148" height="140" rx="10"
+        fill="rgba(255,255,255,0.03)" stroke="rgba(139,92,246,0.2)" stroke-width="1"/>
+  <text x="654" y="178" font-family="Inter, system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.28)" text-anchor="middle">PERFORMA HALAMAN</text>
+  <!-- Speed gauge -->
+  <text x="654" y="208" font-family="Inter, system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)" text-anchor="middle">3.2s</text>
+  <text x="654" y="222" font-family="Inter, system-ui, sans-serif" font-size="10" fill="rgba(167,139,250,0.6)" text-anchor="middle">↓ 55%</text>
+  <text x="654" y="240" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="800" fill="url(#accent-sr)" text-anchor="middle">1.4s</text>
+  <rect x="594" y="252" width="120" height="4" rx="2" fill="rgba(255,255,255,0.06)"/>
+  <rect x="594" y="252" width="45" height="4" rx="2" fill="url(#bar-sr)"/>
+  <text x="654" y="272" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(167,139,250,0.65)" text-anchor="middle">Ops cost ↓50% · Uptime 99.95%</text>
+
+  <!-- Central glass card -->
+  <rect x="222" y="115" width="356" height="210" rx="16"
+        fill="rgba(255,255,255,0.04)" stroke="rgba(139,92,246,0.28)" stroke-width="1"/>
+
+  <!-- Shopping bag icon (simplified) -->
+  <g transform="translate(381, 148)">
+    <!-- Bag body -->
+    <rect x="2" y="12" width="34" height="28" rx="4" fill="url(#accent-sr)" opacity="0.85"/>
+    <!-- Bag handle -->
+    <path d="M10 12 C10 4 28 4 28 12" fill="none" stroke="rgba(167,139,250,0.85)" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Price tag -->
+    <rect x="8" y="22" width="22" height="12" rx="3" fill="rgba(255,255,255,0.15)"/>
+    <line x1="12" y1="28" x2="26" y2="28" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="216" font-family="Inter, system-ui, sans-serif" font-size="18"
+        font-weight="700" fill="rgba(255,255,255,0.92)" text-anchor="middle">
+    Systemrisa Store
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="240" font-family="Inter, system-ui, sans-serif" font-size="11"
+        fill="rgba(167,139,250,0.85)" text-anchor="middle" letter-spacing="2">
+    E-COMMERCE · BOOKING · AUTOMATION
+  </text>
+
+  <!-- Tech badges -->
+  <g transform="translate(264, 268)">
+    <rect x="0" y="0" width="48" height="20" rx="10" fill="rgba(139,92,246,0.15)" stroke="rgba(139,92,246,0.35)" stroke-width="1"/>
+    <text x="24" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600"
+          fill="rgba(167,139,250,0.95)" text-anchor="middle">Laravel</text>
+    <rect x="56" y="0" width="76" height="20" rx="10" fill="rgba(139,92,246,0.15)" stroke="rgba(139,92,246,0.35)" stroke-width="1"/>
+    <text x="94" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600"
+          fill="rgba(167,139,250,0.95)" text-anchor="middle">TailwindCSS</text>
+    <rect x="140" y="0" width="36" height="20" rx="10" fill="rgba(139,92,246,0.15)" stroke="rgba(139,92,246,0.35)" stroke-width="1"/>
+    <text x="158" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600"
+          fill="rgba(167,139,250,0.95)" text-anchor="middle">SEO</text>
+  </g>
+
+  <!-- Bottom label -->
+  <text x="400" y="420" font-family="Inter, system-ui, sans-serif" font-size="10"
+        fill="rgba(255,255,255,0.18)" text-anchor="middle">
+    Agung Dwi Sahputra · Portfolio
+  </text>
+</svg>

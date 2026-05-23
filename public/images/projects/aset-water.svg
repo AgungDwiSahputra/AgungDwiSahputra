@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <defs>
+    <linearGradient id="bg-aw" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020f1f"/>
+      <stop offset="100%" stop-color="#062a3a"/>
+    </linearGradient>
+    <linearGradient id="accent-aw" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="glow-aw" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="440" fill="url(#bg-aw)"/>
+
+  <!-- Map grid lines -->
+  <g stroke="rgba(6,182,212,0.07)" stroke-width="1">
+    <line x1="0" y1="55" x2="800" y2="55"/>
+    <line x1="0" y1="110" x2="800" y2="110"/>
+    <line x1="0" y1="165" x2="800" y2="165"/>
+    <line x1="0" y1="220" x2="800" y2="220"/>
+    <line x1="0" y1="275" x2="800" y2="275"/>
+    <line x1="0" y1="330" x2="800" y2="330"/>
+    <line x1="0" y1="385" x2="800" y2="385"/>
+    <line x1="80" y1="0" x2="80" y2="440"/>
+    <line x1="160" y1="0" x2="160" y2="440"/>
+    <line x1="240" y1="0" x2="240" y2="440"/>
+    <line x1="320" y1="0" x2="320" y2="440"/>
+    <line x1="400" y1="0" x2="400" y2="440"/>
+    <line x1="480" y1="0" x2="480" y2="440"/>
+    <line x1="560" y1="0" x2="560" y2="440"/>
+    <line x1="640" y1="0" x2="640" y2="440"/>
+    <line x1="720" y1="0" x2="720" y2="440"/>
+  </g>
+
+  <!-- Pipeline network lines -->
+  <g stroke="rgba(6,182,212,0.25)" stroke-width="2" fill="none" stroke-linecap="round">
+    <polyline points="120,360 200,300 280,310 360,250 440,260 520,200 600,210 680,160"/>
+    <polyline points="120,280 200,300"/>
+    <polyline points="360,250 360,360"/>
+    <polyline points="520,200 520,360"/>
+    <polyline points="600,210 640,360"/>
+  </g>
+
+  <!-- Node dots on pipeline -->
+  <g fill="rgba(6,182,212,0.6)">
+    <circle cx="120" cy="360" r="5"/>
+    <circle cx="200" cy="300" r="5"/>
+    <circle cx="360" cy="250" r="7"/>
+    <circle cx="520" cy="200" r="7"/>
+    <circle cx="680" cy="160" r="5"/>
+    <circle cx="360" cy="360" r="4"/>
+    <circle cx="520" cy="360" r="4"/>
+  </g>
+
+  <!-- Glow overlay center -->
+  <ellipse cx="400" cy="200" rx="260" ry="160" fill="url(#glow-aw)"/>
+
+  <!-- Central glass card -->
+  <rect x="230" y="130" width="340" height="180" rx="16"
+        fill="rgba(255,255,255,0.04)" stroke="rgba(6,182,212,0.25)" stroke-width="1"/>
+
+  <!-- Map pin icon -->
+  <g transform="translate(370, 162)">
+    <path d="M30 0 C13.4 0 0 13.4 0 30 C0 52.5 30 75 30 75 C30 75 60 52.5 60 30 C60 13.4 46.6 0 30 0Z"
+          fill="url(#accent-aw)" transform="scale(0.5) translate(-30,-10)"/>
+    <circle cx="15" cy="20" r="6" fill="rgba(255,255,255,0.7)" transform="scale(0.5) translate(-30,-10)"/>
+  </g>
+
+  <!-- Map pin simplified -->
+  <g transform="translate(385, 158)">
+    <path d="M15 0 C6.7 0 0 6.7 0 15 C0 26.3 15 37.5 15 37.5 C15 37.5 30 26.3 30 15 C30 6.7 23.3 0 15 0Z"
+          fill="url(#accent-aw)"/>
+    <circle cx="15" cy="15" r="5.5" fill="rgba(255,255,255,0.75)"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="228" font-family="Inter, system-ui, sans-serif" font-size="17"
+        font-weight="700" fill="rgba(255,255,255,0.90)" text-anchor="middle">
+    Asset Water Management System
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="252" font-family="Inter, system-ui, sans-serif" font-size="11"
+        fill="rgba(6,182,212,0.8)" text-anchor="middle" letter-spacing="2">
+    GIS · MONITORING · INFRASTRUKTUR
+  </text>
+
+  <!-- Tech badges -->
+  <g transform="translate(244, 278)">
+    <!-- ASP.NET -->
+    <rect x="0" y="0" width="62" height="20" rx="10" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.35)" stroke-width="1"/>
+    <text x="31" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600"
+          fill="rgba(6,182,212,0.9)" text-anchor="middle">ASP.NET</text>
+    <!-- Leaflet.js -->
+    <rect x="70" y="0" width="62" height="20" rx="10" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.35)" stroke-width="1"/>
+    <text x="101" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600"
+          fill="rgba(6,182,212,0.9)" text-anchor="middle">Leaflet.js</text>
+    <!-- SQL Server -->
+    <rect x="140" y="0" width="72" height="20" rx="10" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.35)" stroke-width="1"/>
+    <text x="176" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600"
+          fill="rgba(6,182,212,0.9)" text-anchor="middle">SQL Server</text>
+  </g>
+
+  <!-- Bottom label -->
+  <text x="400" y="420" font-family="Inter, system-ui, sans-serif" font-size="10"
+        fill="rgba(255,255,255,0.18)" text-anchor="middle">
+    Agung Dwi Sahputra · Portfolio
+  </text>
+</svg>

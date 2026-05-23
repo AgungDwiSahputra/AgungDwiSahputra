@@ -7,7 +7,7 @@ tags: ["Laravel", "TailwindCSS", "PHP", "MySQL", "SEO", "Full-Stack"]
 year: 2022
 status: "completed"
 featured: false
-thumbnail: "/images/projects/systemrisa.jpg"
+thumbnail: "/images/projects/systemrisa.svg"
 liveUrl: ""
 repoUrl: ""
 outcomes:

@@ -7,7 +7,7 @@ tags: ["Laravel", "PHP", "MySQL", "TailwindCSS", "JavaScript", "REST API"]
 year: 2024
 status: "completed"
 featured: true
-thumbnail: "/images/projects/kelas-platform.jpg"
+thumbnail: "/images/projects/kelas-platform.svg"
 liveUrl: "https://kelas.com"
 repoUrl: ""
 outcomes:

@@ -42,9 +42,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <div class={`relative h-44 bg-gradient-to-br ${gradientClass} overflow-hidden`}>
     {thumbnail ? (
       <img
-        src={thumbnail}
+        src={`${base}${thumbnail}`}
         alt={`Screenshot proyek ${title}`}
-        class="w-full h-full object-cover opacity-80"
+        class="w-full h-full object-cover opacity-90"
         loading="lazy"
       />
     ) : (

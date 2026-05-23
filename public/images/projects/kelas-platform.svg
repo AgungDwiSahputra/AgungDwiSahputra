@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <defs>
+    <linearGradient id="bg-kl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030b1a"/>
+      <stop offset="100%" stop-color="#0a1535"/>
+    </linearGradient>
+    <linearGradient id="accent-kl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="85%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="60%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="72%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="glow-kl" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="440" fill="url(#bg-kl)"/>
+
+  <!-- Decorative dots grid -->
+  <g fill="rgba(99,102,241,0.12)">
+    <circle cx="60" cy="60" r="2"/><circle cx="120" cy="60" r="2"/><circle cx="180" cy="60" r="2"/>
+    <circle cx="60" cy="120" r="2"/><circle cx="120" cy="120" r="2"/><circle cx="180" cy="120" r="2"/>
+    <circle cx="60" cy="180" r="2"/><circle cx="120" cy="180" r="2"/>
+    <circle cx="620" cy="260" r="2"/><circle cx="680" cy="260" r="2"/><circle cx="740" cy="260" r="2"/>
+    <circle cx="620" cy="320" r="2"/><circle cx="680" cy="320" r="2"/><circle cx="740" cy="320" r="2"/>
+    <circle cx="620" cy="380" r="2"/><circle cx="680" cy="380" r="2"/><circle cx="740" cy="380" r="2"/>
+  </g>
+
+  <!-- Decorative arcs -->
+  <circle cx="720" cy="80" r="80" fill="none" stroke="rgba(99,102,241,0.08)" stroke-width="1"/>
+  <circle cx="720" cy="80" r="50" fill="none" stroke="rgba(99,102,241,0.06)" stroke-width="1"/>
+  <circle cx="80" cy="380" r="70" fill="none" stroke="rgba(59,130,246,0.07)" stroke-width="1"/>
+
+  <!-- Glow -->
+  <ellipse cx="400" cy="200" rx="280" ry="170" fill="url(#glow-kl)"/>
+
+  <!-- Left mini card: course card mockup -->
+  <rect x="80" y="155" width="140" height="130" rx="10"
+        fill="rgba(255,255,255,0.03)" stroke="rgba(99,102,241,0.2)" stroke-width="1"/>
+  <rect x="88" y="163" width="124" height="55" rx="6" fill="rgba(59,130,246,0.15)"/>
+  <!-- Play button -->
+  <polygon points="126,186 126,202 140,194" fill="rgba(99,102,241,0.7)"/>
+  <rect x="88" y="228" width="80" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+  <rect x="88" y="240" width="55" height="5" rx="2.5" fill="rgba(255,255,255,0.08)"/>
+  <!-- Progress bar -->
+  <rect x="88" y="255" width="124" height="5" rx="2.5" fill="rgba(255,255,255,0.06)"/>
+  <rect x="88" y="255" width="88" height="5" rx="2.5" fill="url(#bar2)"/>
+  <text x="150" y="272" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(99,102,241,0.8)" text-anchor="middle">72% selesai</text>
+
+  <!-- Right mini card: stats -->
+  <rect x="580" y="155" width="140" height="130" rx="10"
+        fill="rgba(255,255,255,0.03)" stroke="rgba(99,102,241,0.2)" stroke-width="1"/>
+  <text x="650" y="185" font-family="Inter, system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.3)" text-anchor="middle">LIGHTHOUSE SCORE</text>
+  <text x="650" y="222" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="800"
+        fill="url(#accent-kl)" text-anchor="middle">90</text>
+  <text x="650" y="238" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.25)" text-anchor="middle">/100</text>
+  <rect x="598" y="250" width="104" height="4" rx="2" fill="rgba(255,255,255,0.06)"/>
+  <rect x="598" y="250" width="93.6" height="4" rx="2" fill="url(#bar1)"/>
+  <text x="650" y="272" font-family="Inter, system-ui, sans-serif" font-size="8" fill="rgba(99,102,241,0.7)" text-anchor="middle">Uptime 99.95%</text>
+
+  <!-- Central glass card -->
+  <rect x="218" y="118" width="364" height="204" rx="16"
+        fill="rgba(255,255,255,0.04)" stroke="rgba(99,102,241,0.25)" stroke-width="1"/>
+
+  <!-- Graduation cap icon -->
+  <g transform="translate(382, 148)">
+    <!-- Cap base -->
+    <polygon points="18,0 36,9 18,18 0,9" fill="url(#accent-kl)" opacity="0.9"/>
+    <!-- Cap top -->
+    <rect x="14" y="12" width="8" height="12" rx="1" fill="url(#accent-kl)" opacity="0.7"/>
+    <!-- Tassel -->
+    <line x1="36" y1="9" x2="36" y2="22" stroke="rgba(129,140,248,0.8)" stroke-width="2"/>
+    <circle cx="36" cy="23" r="2.5" fill="rgba(129,140,248,0.8)"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="212" font-family="Inter, system-ui, sans-serif" font-size="18"
+        font-weight="700" fill="rgba(255,255,255,0.92)" text-anchor="middle">
+    Kelas.com Learning Platform
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="236" font-family="Inter, system-ui, sans-serif" font-size="11"
+        fill="rgba(99,102,241,0.85)" text-anchor="middle" letter-spacing="2">
+    E-LEARNING · PERFORMANCE · SCALABLE
+  </text>
+
+  <!-- Tech badges -->
+  <g transform="translate(258, 264)">
+    <rect x="0" y="0" width="48" height="20" rx="10" fill="rgba(59,130,246,0.15)" stroke="rgba(59,130,246,0.35)" stroke-width="1"/>
+    <text x="24" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600"
+          fill="rgba(96,165,250,0.95)" text-anchor="middle">Laravel</text>
+    <rect x="56" y="0" width="36" height="20" rx="10" fill="rgba(59,130,246,0.15)" stroke="rgba(59,130,246,0.35)" stroke-width="1"/>
+    <text x="74" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600"
+          fill="rgba(96,165,250,0.95)" text-anchor="middle">PHP</text>
+    <rect x="100" y="0" width="50" height="20" rx="10" fill="rgba(59,130,246,0.15)" stroke="rgba(59,130,246,0.35)" stroke-width="1"/>
+    <text x="125" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600"
+          fill="rgba(96,165,250,0.95)" text-anchor="middle">MySQL</text>
+    <rect x="158" y="0" width="68" height="20" rx="10" fill="rgba(59,130,246,0.15)" stroke="rgba(59,130,246,0.35)" stroke-width="1"/>
+    <text x="192" y="14" font-family="Inter, system-ui, sans-serif" font-size="9.5" font-weight="600"
+          fill="rgba(96,165,250,0.95)" text-anchor="middle">REST API</text>
+  </g>
+
+  <!-- Bottom label -->
+  <text x="400" y="420" font-family="Inter, system-ui, sans-serif" font-size="10"
+        fill="rgba(255,255,255,0.18)" text-anchor="middle">
+    Agung Dwi Sahputra · Portfolio
+  </text>
+</svg>
