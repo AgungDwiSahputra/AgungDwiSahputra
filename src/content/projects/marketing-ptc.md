@@ -2,7 +2,7 @@
 title: "Website Marketing Pertamina Training & Consulting (PTC)"
 slug: "web-marketing-ptc"
 description: "Sistem pemasaran digital terintegrasi yang dirancang untuk menyederhanakan akuisisi klien, manajemen kampanye, dan analisis performa secara real-time."
-category: "Web Application / MarTech (Marketing Technology)"
+category: "Web Application / MarTech"
 tags: ["Laravel", "MySQL", "JavaScript", "TailwindCSS", "Marketing Automation", "CRM", "Data Analytics"]
 year: 2025
 status: "completed"

@@ -2,9 +2,9 @@
 title: "Kamibox"
 slug: "kamibox"
 description: "Sistem manajemen limbah terintegrasi yang dirancang untuk menyederhanakan pelacakan daur ulang, inisiatif edukasi, dan analisis dampak lingkungan secara real-time."
-category: "Web Application / GreenTech (Green Technology)"
+category: "Web Application / GreenTech"
 tags: ["PHP Native", "MySQL", "JavaScript", "TailwindCSS", "Waste Management", "Sustainability Tracking", "Impact Analytics"]
-year: 2025
+year: 2022
 status: "completed"
 featured: true
 thumbnail: "/images/projects/kamibox-greentech.svg"
@@ -24,10 +24,10 @@ Dibangun dengan arsitektur yang tangguh, aplikasi web ini berfungsi sebagai pusa
 
 ## Tech Stack
 
-- **Backend:** PHP Native)
+- **Backend:** PHP Native
 - **Database:** MySQL
-- **Frontend:** TailwindCSS, Vanilla JavaScript
-- **Architecture:** MVC (Model-View-Controller)
+- **Frontend:** Vanilla JavaScript
+- **Architecture:** Native
 
 ## Key Features
 

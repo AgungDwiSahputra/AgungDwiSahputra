@@ -4,7 +4,7 @@ slug: "organisasi-kita"
 description: "Sistem informasi manajemen organisasi yang dirancang untuk memudahkan pengelolaan keanggotaan, acara, dan proses rekrutmen anggota baru secara terpusat."
 category: "Web Application / Information System"
 tags: ["PHP Native", "MySQL", "JavaScript", "Information System", "Member Management", "Event Management"]
-year: 2025
+year: 2022
 status: "completed"
 featured: true
 thumbnail: "/images/projects/organisasi-kita.svg"
@@ -26,8 +26,8 @@ Dibangun dengan arsitektur yang solid, aplikasi web ini berfungsi lebih dari sek
 
 - **Backend:** PHP Native
 - **Database:** MySQL
-- **Frontend:** TailwindCSS, Vanilla JavaScript
-- **Architecture:** MVC (Model-View-Controller)
+- **Frontend:** Vanilla JavaScript
+- **Architecture:** Native
 
 ## Key Features
 
